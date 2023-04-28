@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Dropdown, Navbar, Menu } from 'react-daisyui';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Pages/Authprovider/Authprovider';
 
 const Header = () => {
+    const{user, logout}=useContext(AuthContext)
     return (
         <nav className='w-11/12 mx-auto'>
             <div className="navbar bg-base-100">
@@ -27,9 +29,19 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <p className='me-5'>user</p>
-                    <Link to='/login' className="py-0"><button className="btn btn-ghost">Login</button></Link>
-                    <Link to='/signup' className="py-0"><button className="btn btn-ghost">Sign Up</button></Link>
+                    <p className='me-5'>{user?user.displayName.split(" ")[0]:'user'}</p>
+                    <img src="" alt="" />
+                    {
+                        user?<div>
+                            <Link to='/signup' className="py-0"><button className="btn btn-ghost">Sign Up</button></Link>
+                             <button onClick={logout}>logout</button>
+                            </div>
+                            :
+                            <Link to='/login' className="py-0"><button className="btn btn-ghost">Login</button></Link>
+                
+
+                    }
+                    
                 </div>
             </div>
         </nav>
