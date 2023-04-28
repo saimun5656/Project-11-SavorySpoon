@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "item_name": "Hand Sandwich",
+      "details": "Tomato sauce, mozzarella cheese, fresh basil",
+      "price": 10.99,
+      "img_url": "/public/img/Rectangle 22.png"
+    },
+    {
+      "id": 2,
+      "item_name": "Pesto Pasta",
+      "details": "Penne pasta with basil pesto sauce and Parmesan cheese",
+      "price": 8.99,
+      "img_url": "https://example.com/pesto-pasta.jpg"
+    },
+    {
+      "id": 3,
+      "item_name": "Grilled Chicken Sandwich",
+      "details": "Grilled chicken breast, lettuce, tomato, and mayo on a toasted bun",
+      "price": 9.99,
+      "img_url": "https://thumbs.dreamstime.com/b/grilled-chicken-sandwich-yellow-cheese-vegetables-74298577.jpg"
+    },
+    {
+      "id": 4,
+      "item_name": "Beef Burger",
+      "details": "Beef patty, lettuce, tomato, onion, and pickles on a sesame seed bun",
+      "price": 11.99,
+      "img_url": "/public/img/Rectangle 22 (1).png"
+    },
+    {
+      "id": 5,
+      "item_name": "Fish and Chips",
+      "details": "Battered fish and French fries with tartar sauce",
+      "price": 12.99,
+      "img_url": "https://example.com/fish-and-chips.jpg"
+    },
+    {
+      "id": 6,
+      "item_name": "Caesar Salad",
+      "details": "Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing",
+      "price": 7.99,
+      "img_url": "https://example.com/caesar-salad.jpg"
+    },
+    {
+      "id": 7,
+      "item_name": "Pad Thai",
+      "details": "Stir-fried rice noodles with shrimp, tofu, bean sprouts, and peanuts",
+      "price": 13.99,
+      "img_url": "https://example.com/pad-thai.jpg"
+    },
+    {
+      "id": 8,
+      "item_name": "Sushi Roll",
+      "details": "Tuna, avocado, and cucumber sushi roll",
+      "price": 9.99,
+      "img_url": "https://example.com/sushi-roll.jpg"
+    },
+    {
+      "id": 9,
+      "item_name": "Chicken Tikka Masala",
+      "details": "Grilled chicken in a creamy tomato sauce with spices",
+      "price": 14.99,
+      "img_url": "https://example.com/tikka-masala.jpg"
+    },
+    {
+      "id": 10,
+      "item_name": "Veggie Burger",
+      "details": "Vegetable patty, lettuce, tomato, onion, and pickles on a sesame seed bun",
+      "price": 10.99,
+      "img_url": "https://example.com/veggie-burger.jpg"
+    },
+    {
+      "id": 11,
+      "item_name": "Beef Tacos",
+      "details": "Two soft shell tacos with beef, lettuce, cheese, and sour cream",
+      "price": 8.99,
+      "img_url": "https://example.com/beef-tacos.jpg"
+    }
+]
