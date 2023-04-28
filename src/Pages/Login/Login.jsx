@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../Authprovider/Authprovider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate=useNavigate('')
+  const{googleSignup}=useContext(AuthContext)
+  const location=useLocation()
+  const from=location.pathname?.state?.from||'/'
+  console.log(location);
+  const handleGoogleLogin=()=>{
+        googleSignup()
+        .then(res=>{
+           navigate(from)
+        })
+  }
  return (
   <div className="hero min-h-screen bg-base-200">
     
@@ -30,8 +43,8 @@ const Login = () => {
                </label>
            </div>
            <div className="form-control mt-6">
-            <input  className="btn btn-primary" type="submit" value="Login" />
-              
+            <input  className="btn btn-primary mb-5" type="submit" value="Login" />
+            <input onClick={handleGoogleLogin} className="btn btn-primary"  value="Continue with Google" />
            </div>
         </form>
         

@@ -17,6 +17,7 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/foods'>Foods</Link></li>
                         <li><Link to='/services'>Services</Link></li>
+                        <li><Link to='/signup' className="py-0">Sign Up</Link></li>
                         </ul>
                     </div>
                     <a className="normal-case text-3xl font-bold text-emerald-400">Savory</a>
@@ -26,18 +27,16 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/foods'>Foods</Link></li>
                         <li><Link to='/services'>Services</Link></li>
+                        <li><Link to='/signup' className="py-0">Sign Up</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <p className='me-5'>{user?user.displayName.split(" ")[0]:'user'}</p>
-                    <img src="" alt="" />
+                    <img className='rounded-full w-8 bg-gray-200' src={`${user?user.photoURL:"/public/img/Usercon.png"}`} alt="" />
                     {
-                        user?<div>
-                            <Link to='/signup' className="py-0"><button className="btn btn-ghost">Sign Up</button></Link>
-                             <button onClick={logout}>logout</button>
-                            </div>
+                        user?<button className='ms-5 bg-green-300 px-3 py-2 rounded-lg' onClick={logout}>logout</button>
                             :
-                            <Link to='/login' className="py-0"><button className="btn btn-ghost">Login</button></Link>
+                            <Link to='/login' className="py-0"><button className="5 bg-green-300 px-3 py-2 rounded-lg ms-2">Login</button></Link>
                 
 
                     }
