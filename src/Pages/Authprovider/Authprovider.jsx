@@ -24,11 +24,15 @@ const googleSignup=()=>{
 const logout=()=>{
     signOut(auth)
 }
+const logInWithEmailPass=(email,password)=>{
+    return signInWithEmailAndPassword(auth,email,password)
+}
 
 const Authinfo={
     user,
     signUp,
     googleSignup,
+    logInWithEmailPass,
     logout
 }
     return (

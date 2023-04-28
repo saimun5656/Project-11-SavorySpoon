@@ -5,6 +5,7 @@ import { AuthContext } from '../../Pages/Authprovider/Authprovider';
 
 const Header = () => {
     const{user, logout}=useContext(AuthContext)
+    //const name=user.displayName.split(" ")[0]||'user'
     return (
         <nav className='w-11/12 mx-auto'>
             <div className="navbar bg-base-100">
@@ -31,8 +32,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <p className='me-5'>{user?user.displayName.split(" ")[0]:'user'}</p>
-                    <img className='rounded-full w-8 bg-gray-200' src={`${user?user.photoURL:"/public/img/Usercon.png"}`} alt="" />
+                    <p className='me-5'>{user?.displayName?user.displayName.split(' ')[0]:'user'}</p>
+                    <img className='rounded-full w-8 bg-gray-200' src={`${user?.photoURL?user.photoURL:"./img/Usercon.png"}`} alt="" />
                     {
                         user?<button className='ms-5 bg-green-300 px-3 py-2 rounded-lg' onClick={logout}>logout</button>
                             :

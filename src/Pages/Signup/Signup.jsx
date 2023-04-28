@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Authprovider/Authprovider';
+import { updateProfile } from 'firebase/auth';
 
 const Signup = () => {
     const [success,setSuccess]=useState('')
@@ -28,6 +29,7 @@ const Signup = () => {
          signUp(email,password)
          .then(res=>{
             console.log(res.user);
+            updateProfile(res.user,{displayName:name})
             setSuccess('user created succcessfully')
          })
          .catch(err=>{
@@ -49,7 +51,7 @@ const Signup = () => {
    
       <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Sign Up now!</h1>
-      <img className='login-img mt-10' src="/public/img/10594778_4498897.jpg" alt="" />
+      <img className='login-img mt-10' src="./img/10594778_4498897.jpg" alt="" />
          
       </div>
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -59,7 +61,7 @@ const Signup = () => {
                <label className="label">
                    <span className="label-text">Name</span>
                </label>
-               <input type="text" name='name' placeholder="Name" className="input input-bordered" />
+               <input type="text" name='name' placeholder="Name" className="input input-bordered" required/>
            </div>
            <div className="form-control">
                <label className="label">
