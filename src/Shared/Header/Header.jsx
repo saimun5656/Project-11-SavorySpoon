@@ -29,6 +29,7 @@ const Header = () => {
                 <div className="navbar-end">
                     <p className='me-5'>user</p>
                     <Link to='/login' className="py-0"><button className="btn btn-ghost">Login</button></Link>
+                    <Link to='/signup' className="py-0"><button className="btn btn-ghost">Sign Up</button></Link>
                 </div>
             </div>
         </nav>
