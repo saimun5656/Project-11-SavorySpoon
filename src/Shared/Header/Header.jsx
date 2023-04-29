@@ -7,7 +7,7 @@ const Header = () => {
     const{user, logout}=useContext(AuthContext)
     //const name=user.displayName.split(" ")[0]||'user'
     return (
-        <nav className='w-11/12 mx-auto'>
+        <nav className='max-w-screen-xl mx-auto'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -18,7 +18,8 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/foods'>Foods</Link></li>
                         <li><Link to='/services'>Services</Link></li>
-                        <li><Link to='/signup' className="py-0">Sign Up</Link></li>
+                        <li><Link to='/orders'>Orders</Link></li>
+                        <li><Link to='/signup'>Sign Up</Link></li>
                         </ul>
                     </div>
                     <a className="normal-case text-3xl font-bold text-emerald-400">Savory</a>
@@ -28,7 +29,8 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/foods'>Foods</Link></li>
                         <li><Link to='/services'>Services</Link></li>
-                        <li><Link to='/signup' className="py-0">Sign Up</Link></li>
+                        <li><Link to='/orders'>Orders</Link></li>
+                        <li><Link to='/signup'>Sign Up</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

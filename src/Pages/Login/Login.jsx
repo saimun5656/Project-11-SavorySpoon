@@ -8,8 +8,8 @@ const Login = () => {
   const navigate=useNavigate('')
   const{googleSignup ,logInWithEmailPass}=useContext(AuthContext)
   const location=useLocation()
-  const from=location.pathname?.state?.from||'/'
-  console.log(location);
+  const from=location?.state?.from||'/'
+  console.log(from);
   const handleSubmit=(e)=>{
     setError('')
     setSuccess('')
@@ -22,6 +22,7 @@ const Login = () => {
      .then(res=>{
       console.log(res.user);
       setSuccess('user login succcessful')
+      navigate(from)
      })
      .catch(err=>{
       console.log(err);
